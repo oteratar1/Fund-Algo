@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../include/functions.h"
 #include <stdint.h>
+#include <math.h>
 
 void Multiples(int* const x){
     int c = 0;
@@ -15,7 +16,9 @@ void Multiples(int* const x){
     if(c == 0){
         printf("Sorry bro, there are no numbers\n");
     }
+    printf("\n");
 }
+
 void IsPrime(const int* x){
     int c = 0;
     if (*x != 1 && *x%2 != 0 && *x>0){
@@ -40,7 +43,8 @@ void IsPrime(const int* x){
             printf("Composite number\n");
             }
     }
-void Dec_toHex(int x, size_t l)
+
+void Dec_toHex(int x, int l)
     {
       char hexaDeciNum[l];
 
@@ -70,8 +74,29 @@ void Dec_toHex(int x, size_t l)
      printf("\n") ;
 }
 
-
-
+void Tabl(int* x){
+    int c =0;
+    printf("%7c",'|');
+    
+    for(int i = 1; i <= *x; ++i){
+        printf("pow = %5d|", i);
+    }
+    printf("\n");
+    
+    for (int i = 1, j = 1;  i <= 10 ; ++j){
+        if (c ==0){
+            printf("%5d |",i);
+        }
+        printf("%11lu|",(uint64_t) pow(i,j));
+        ++c;
+        if (j == *x){
+            printf("\n");
+            ++i;
+            j = 0;
+            c =0;
+        }
+    }
+}
 
 
 uint64_t SumN(int*x){

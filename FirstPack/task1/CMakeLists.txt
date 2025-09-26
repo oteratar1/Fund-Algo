@@ -14,4 +14,4 @@ target_include_directories(${CMAKE_PROJECT_NAME}_lib  PUBLIC include)
 # Основная программа
 
 add_executable(${CMAKE_PROJECT_NAME}_exe main.c)
-target_link_libraries(${CMAKE_PROJECT_NAME}_exe ${CMAKE_PROJECT_NAME}_lib)
+target_link_libraries(${CMAKE_PROJECT_NAME}_exe ${CMAKE_PROJECT_NAME}_lib m)
