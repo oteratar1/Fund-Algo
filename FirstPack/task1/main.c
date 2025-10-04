@@ -26,7 +26,7 @@ int main(const int argc, char* argv[]) {
     }
     
     int  l = strlen(argv[1]);
-    int x = atoi(argv[1]);
+    int x = (int) result;
     char* flag = argv[2];
     
     if(x < 0){
@@ -46,13 +46,13 @@ int main(const int argc, char* argv[]) {
         case 'h':
             {
                 printf("Numbers:\n");
-                Multiples(&x);
+                Multiples(x);
                 break;
             }
         case 'p':
             {
                 printf("Сhecking for the primality of a number:\n");
-                IsPrime(&x);
+                IsPrime(x);
                 break;
             }
         case 's':
@@ -66,12 +66,12 @@ int main(const int argc, char* argv[]) {
                     printf("Bad input\n");
                     return BAD_INPUT;
                 }
-                Tabl(&x);
+                Tabl(x);
                 break;
             }
         case 'a':
         {
-            printf("%lu\n",SumN(&x));
+            printf("%lu\n",SumN(x));
             break;
         }
         case 'f':
@@ -80,7 +80,7 @@ int main(const int argc, char* argv[]) {
                     printf("Sorry bro, its too big\n");
                     return BAD_INPUT;
                 }
-                printf("%lu\n",Factorial(&x));
+                printf("%lu\n",Factorial(x));
                 break;
             }
         default:

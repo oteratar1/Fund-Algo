@@ -2,13 +2,13 @@
 #include "../include/functions.h"
 
 
-void Multiples(int* const x){
+void Multiples(  int x){
     int c = 0;
-    for(int i = *x;*x !=0 &&  i<101; i += *x ){
+    for(int i = x;x !=0 &&  i<101; i += x ){
         printf("%d\t", i);
         ++c;
     }
-    if(*x == 0){
+    if(x == 0){
         printf("Sorry bro, its zero\n");
         ++c;
     }
@@ -18,11 +18,11 @@ void Multiples(int* const x){
     printf("\n");
 }
 
-void IsPrime(const int* x){
+void IsPrime( int x){
     int c = 0;
-    if (*x != 1 && *x%2 != 0 && *x>0){
-        for(int i = 3;i*i <= *x;i+=2){
-            if(*x%i == 0){
+    if (x != 1 && x%2 != 0 && x>0){
+        for(int i = 3;i*i <= x;i+=2){
+            if(x%i == 0){
                 printf("Composite number\n");
                 ++c;
                 break;
@@ -32,13 +32,13 @@ void IsPrime(const int* x){
             printf("Prime number\n");
         }
     }
-    else if(*x == 1){
+    else if(x == 1){
             printf("Its 1!\n");
         }
-    else if(*x == 2){
+    else if(x == 2){
             printf("Prime number\n");
             }
-    else if(*x != 1 && *x != 2){
+    else if(x != 1 && x != 2){
             printf("Composite number\n");
             }
     }
@@ -73,11 +73,11 @@ void Dec_toHex(int x, int l)
      printf("\n") ;
 }
 
-void Tabl(int* x){
+void Tabl(int x){
     int c =0;
     printf("%7c",'|');
     
-    for(int i = 1; i <= *x; ++i){
+    for(int i = 1; i <= x; ++i){
         printf("pow = %5d|", i);
     }
     printf("\n");
@@ -88,7 +88,7 @@ void Tabl(int* x){
         }
         printf("%11lu|",(uint64_t) pow(i,j));
         ++c;
-        if (j == *x){
+        if (j == x){
             printf("\n");
             ++i;
             j = 0;
@@ -98,15 +98,15 @@ void Tabl(int* x){
 }
 
 
-uint64_t SumN(int*x){
+uint64_t SumN(int x){
     uint64_t s = 0;
-    s = (uint64_t)(*x) * (1 + *x) /2;
+    s = (uint64_t)(x) * (1 + x) /2;
     return s;
 }
 
-uint64_t Factorial(int* x){
+uint64_t Factorial(int x){
     uint64_t s = 1;
-    for (int i = 2 ; i<=*x;++i){
+    for (int i = 2 ; i<=x;++i){
         s*=i;
     }
     return s;
