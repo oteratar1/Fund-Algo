@@ -1,7 +1,6 @@
-#include <stdio.h>
+
 #include "../include/functions.h"
-#include <stdint.h>
-#include <math.h>
+
 
 void Multiples(int* const x){
     int c = 0;

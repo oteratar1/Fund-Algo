@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "include/functions.h"
-#include "string.h"
-#include <limits.h>
 
 
 

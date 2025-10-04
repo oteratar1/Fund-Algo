@@ -1,7 +1,11 @@
 #pragma once 
 #include <stddef.h>
 #include <stdint.h>
-
+#include <limits.h>
+#include "string.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
 typedef enum {
     BAD_INPUT = 0,
     OVERFLOW,
