@@ -2,7 +2,7 @@
 #include "../include/functions.h"
 bool* find_pr(const int32_t* t){
     int32_t limit = *t * 20;
-    bool* isPrimes = malloc((limit+1) * sizeof(bool));
+    bool* isPrimes = (bool*)malloc((limit+1) * sizeof(bool));
     if(isPrimes == NULL){
         return NULL;
     }
