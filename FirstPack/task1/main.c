@@ -50,7 +50,11 @@ int main(const int argc, char* argv[]) {
                 break;
             }
         case 'p':
-            {
+            {   
+                if(IsPrime(x) == BAD_INPUT){
+                    printf("bad");
+                    break;
+                }
                 printf("Сhecking for the primality of a number:\n");
                 IsPrime(x);
                 break;

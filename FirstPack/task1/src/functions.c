@@ -18,9 +18,13 @@ void Multiples(  int x){
     printf("\n");
 }
 
-void IsPrime( int x){
+int IsPrime( int x){
     int c = 0;
-    if (x != 1 && x%2 != 0 && x>0){
+    if (x <= 0){
+        
+        return BAD_INPUT;
+    }
+    if (x != 1 && x%2 != 0 ){
         for(int i = 3;i*i <= x;i+=2){
             if(x%i == 0){
                 printf("Composite number\n");
@@ -38,7 +42,7 @@ void IsPrime( int x){
     else if(x == 2){
             printf("Prime number\n");
             }
-    else if(x != 1 && x != 2){
+    else if(x != 1 && x != 2 ){
             printf("Composite number\n");
             }
     }
@@ -74,6 +78,7 @@ void Dec_toHex(int x, int l)
 }
 
 void Tabl(int x){
+    
     int c =0;
     printf("%7c",'|');
     
@@ -81,18 +86,23 @@ void Tabl(int x){
         printf("pow = %5d|", i);
     }
     printf("\n");
-    
+    uint64_t  p= 1;
+    uint64_t  fund= 1;
     for (int i = 1, j = 1;  i <= 10 ; ++j){
+        
         if (c ==0){
-            printf("%5d |",i);
+            printf("%5d |", i);
         }
-        printf("%11lu|",(uint64_t) pow(i,j));
+        printf("%11lu|", fund);
+        fund *= p;
         ++c;
         if (j == x){
             printf("\n");
             ++i;
+            p = i;
             j = 0;
             c =0;
+            fund = p;
         }
     }
 }

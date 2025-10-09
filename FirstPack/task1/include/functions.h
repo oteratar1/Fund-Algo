@@ -16,7 +16,7 @@ typedef enum {
 } BadType;
 
 void Multiples( int x);
-void IsPrime(int x);
+int IsPrime(int x);
 void Dec_toHex(int n, int l);
 void Tabl(int x);
 uint64_t SumN(int x);
